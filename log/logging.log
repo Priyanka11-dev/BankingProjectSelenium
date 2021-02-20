@@ -1,0 +1,7 @@
+2021-02-20 23:23:09 INFO  SeleniumJava:15 - url is opened
+  2021-02-20 23:23:09 INFO  SeleniumJava:18 - page is maximized
+  2021-02-20 23:23:09 INFO  SeleniumJava:23 - userid entered
+  2021-02-20 23:23:09 INFO  SeleniumJava:26 - password entered
+  2021-02-20 23:23:12 INFO  SeleniumJava:29 - login button clicked
+  2021-02-20 23:23:17 INFO  SeleniumJava:34 - Assertion applied
+  

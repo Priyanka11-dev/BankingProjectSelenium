@@ -1,5 +1,7 @@
 package TestCases;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -11,11 +13,15 @@ public class BaseClass {
 	public String pswrd="1!";
 	public String url="http://demo.guru99.com/V4/";
 	public static WebDriver driver;
+	public Logger logger; 
 	
 	@BeforeClass
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
+		
+		logger=Logger.getLogger("SeleniumJava");
+		PropertyConfigurator.configure("log4j.properties");
 	}
 	
 	@AfterClass
