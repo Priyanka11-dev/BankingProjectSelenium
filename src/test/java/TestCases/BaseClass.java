@@ -7,17 +7,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-public class BaseClass {
+import Utilities.ReadConfig;
 
-	public String userid="mngr26593";
-	public String pswrd="1!";
-	public String url="http://demo.guru99.com/V4/";
+public class BaseClass {
+	
+	ReadConfig readConfig=new ReadConfig();
+	public String userid=readConfig.getUserid();
+	public String pswrd=readConfig.getPswrd();
+	public String url=readConfig.getURL();
 	public static WebDriver driver;
 	public Logger logger; 
 	
 	@BeforeClass
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", readConfig.getChromepath());
 		driver=new ChromeDriver();
 		
 		logger=Logger.getLogger("SeleniumJava");
